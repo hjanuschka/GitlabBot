@@ -1,0 +1,8 @@
+{
+  "endpoint": "http://gitlab/api/v3",
+  "token": "XXXX",
+  "lgtmUsers": [ "hjanuschka" ],
+  "lgtmRequired": 1,
+  "port": 8080,
+  "botUsername": "deploy-user"
+}

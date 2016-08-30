@@ -1,0 +1,17 @@
+[Unit]
+Description=CI Bot
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/ci-bot/
+ExecStart=/usr/local/bin/ruby /ci-bot/app.rb 8080
+
+# Give a reasonable amount of time for the server to start up/shut down
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target
