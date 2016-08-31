@@ -11,18 +11,26 @@ resets automatically on MR changes or code pushes.
     * Impersonate as the bot user, and go to: http://gitlab.krone.at/profile/account, copy the token
     ![add_user](https://raw.githubusercontent.com/hjanuschka/GitlabBot/master/assets/private_token.png)
   * Install the Bot, on a server that can be reached from your gitlab installation (the bot also needs to be able to reach the gitlab instance)
+   
+   
     ```
     git clone https://github.com/hjanuschka/GitlabBot.git
     cp config.json.example config.json
     ```
+    
+     
   * Customize the `config.json`
   * Customize the `ci-bot.service` to fit your paths
   * install the systemd service
+   
+   
     ```
     cp ci-bot.service /etc/systemd/system/
     systemctl enable ci-bot.service
     systemctl start ci-bot.service
     ```
+    
+      
   * Add the bot user to the desired gitlab project (on Project -> Members (master role, as it needs to be able to merge))
   * Add a webhook to the project (on Project -> Webhooks)
   ![add_user](https://raw.githubusercontent.com/hjanuschka/GitlabBot/master/assets/webhook.png)
